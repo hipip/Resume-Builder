@@ -1,42 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+:root {
+  --main-color: #1e40af;
+  --hero-color: rgba(30, 64, 175, 0.9);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  font-family: "Montserrat", serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 80px;
+  box-shadow: 0 0 10px 0 black;
+  background-color: white;
+}
+
+.header-link {
+  position: relative;
+  font-weight: 500;
+  padding: 10px 20px;
+  color: var(--main-color);
+}
+
+.header-link:not(.logo):not(.build-my-resume-btn)::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  text-align: center;
+  height: 2px;
+  transform-origin: left;
+  background-color: var(--main-color);
+  transform: scaleX(0);
+  transition: transform 0.35s ease-in-out;
+}
+
+.header-link:not(.logo):not(.build-my-resume-btn):hover::before {
+  transform: scaleX(1);
+  transition: transform 0.35s ease-in-out;
+}
+
+.header-link.logo {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+.header-col-two {
+  display: flex;
+  gap: 40px;
+}
+
+.build-my-resume-btn {
+  background-color: var(--main-color);
+  color: white;
+  border-radius: 30px;
+  padding: 10px 30px;
+  box-shadow: 0 0 0 -5px var(--main-color);
+  transition: box-shadow 0.3s ease;
+}
+
+.build-my-resume-btn:hover {
+  box-shadow: 0 0 30px -5px var(--main-color);
+}
+
+.hero {
+  color: white;
+  height: 80vh;
+  background: linear-gradient(var(--hero-color), var(--hero-color)),
+    url("https://i.imgur.com/5vECntx.png");
+  background-position: center, top;
+  animation: float-animation 5s ease-in-out infinite;
+}
+
+@keyframes float-animation {
+  0% {
+    background-position: center, 0 10px;
+  }
+  50% {
+    background-position: center, 0 20px;
+  }
+  100% {
+    background-position: center, 0 10px;
+  }
+}
+
+.hero-text-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+  padding: 100px;
+  margin: 50px;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+#main-call-to-action {
+  color: var(--main-color);
+  font-weight: 700;
+  padding: 15px 60px;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  background-color: white;
+  box-shadow: 0 0 0 -5px rgba(255, 255, 255, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+
+#main-call-to-action:hover,
+#main-call-to-action:focus {
+  box-shadow: 0 0 40px -5px rgba(255, 255, 255, 0.5);
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.section:not(.hero) {
+  margin: 100px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+#special-span {
+  color: var(--main-color);
 }
