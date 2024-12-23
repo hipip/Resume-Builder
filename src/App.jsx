@@ -92,6 +92,22 @@ function App() {
       id: uuidv4(),
       name: "python",
     },
+    {
+      id: uuidv4(),
+      name: "React Js",
+    },
+    {
+      id: uuidv4(),
+      name: "MongoDB",
+    },
+    {
+      id: uuidv4(),
+      name: "git/github",
+    },
+    {
+      id: uuidv4(),
+      name: "Agile",
+    },
   ]);
 
   const router = createBrowserRouter([
@@ -107,7 +123,7 @@ function App() {
           education={education}
           experience={experience}
           skills={skills}
-          theme="professional"
+          theme="elegant"
         />
       ),
     },

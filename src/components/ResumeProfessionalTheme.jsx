@@ -17,26 +17,36 @@ const ResumeProfessionalTheme = ({
           <h3>{contactInfo.jobTitle}</h3>
         </header>
         <div className="resume-links-wrapper">
-          <div className="resume-link">
-            <FontAwesomeIcon icon={faPhone} />
-            <p>{contactInfo.phoneNumber}</p>
-          </div>
-          <div className="resume-link">
-            <FontAwesomeIcon icon={faEnvelope} />
-            <p>{contactInfo.email}</p>
-          </div>
-          <div className="resume-link">
-            <FontAwesomeIcon icon={faLocationDot} />
-            <p>{contactInfo.location}</p>
-          </div>
-          <a className="resume-link">
-            <FontAwesomeIcon icon={faLinkedin} />
-            <p>{contactInfo.linkedIn}</p>
-          </a>
-          <a className="resume-link">
-            <FontAwesomeIcon icon={faGithub} />
-            <p>{contactInfo.github}</p>
-          </a>
+          {contactInfo.phoneNumber !== "" && (
+            <div className="resume-link">
+              <FontAwesomeIcon icon={faPhone} />
+              <p>{contactInfo.phoneNumber}</p>
+            </div>
+          )}
+          {contactInfo.email !== "" && (
+            <div className="resume-link">
+              <FontAwesomeIcon icon={faEnvelope} />
+              <p>{contactInfo.email}</p>
+            </div>
+          )}
+          {contactInfo.location !== "" && (
+            <div className="resume-link">
+              <FontAwesomeIcon icon={faLocationDot} />
+              <p>{contactInfo.location}</p>
+            </div>
+          )}
+          {contactInfo.linkedIn !== "" && (
+            <a className="resume-link">
+              <FontAwesomeIcon icon={faLinkedin} />
+              <p>{contactInfo.linkedIn}</p>
+            </a>
+          )}
+          {contactInfo.github !== "" && (
+            <a className="resume-link">
+              <FontAwesomeIcon icon={faGithub} />
+              <p>{contactInfo.github}</p>
+            </a>
+          )}
         </div>
       </section>
       <section className="experience-section">
