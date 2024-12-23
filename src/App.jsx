@@ -1,9 +1,19 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  Navigate,
+  RouterProvider,
+} from "react-router-dom";
 import "./App.css";
 import HomePage from "./pages/HomePage";
+
+import BuilderPage from "./pages/BuilderPage";
+import ContactInfo from "./pages/ContactInfo";
+import Education from "./pages/Education";
+import Experience from "./pages/Experience";
+import Skills from "./pages/Skills";
+import Download from "./pages/Download";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import Resume from "./components/Resume";
 
 function App() {
   const [contactInfo, setContactInfo] = useState({
@@ -110,10 +120,51 @@ function App() {
     },
   ]);
 
+  const [theme, setTheme] = useState("professional");
+
   const router = createBrowserRouter([
     {
       path: "/",
       element: <HomePage />,
+    },
+    {
+      path: "/builder",
+      element: <BuilderPage />,
+      children: [
+        {
+          index: true,
+          element: <Navigate to="contact-info" replace />,
+        },
+        {
+          path: "contact-info",
+          element: <ContactInfo data={contactInfo} setData={setContactInfo} />,
+        },
+        {
+          path: "education",
+          element: <Education />,
+        },
+        {
+          path: "experience",
+          element: <Experience />,
+        },
+        {
+          path: "skills",
+          element: <Skills />,
+        },
+        {
+          path: "download",
+          element: (
+            <Download
+              contactInfo={contactInfo}
+              education={education}
+              experience={experience}
+              skills={skills}
+              theme={theme}
+              setTheme={setTheme}
+            />
+          ),
+        },
+      ],
     },
   ]);
 

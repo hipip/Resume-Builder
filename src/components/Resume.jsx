@@ -2,9 +2,16 @@ import ResumeElegantTheme from "./ResumeElegantTheme";
 import ResumeProfessionalTheme from "./ResumeProfessionalTheme";
 import ResumeStandoutTheme from "./ResumeStandoutTheme";
 
-const Resume = ({ skills, contactInfo, education, experience, theme }) => {
+const Resume = ({
+  skills,
+  contactInfo,
+  education,
+  experience,
+  theme,
+  isMinimized,
+}) => {
   return (
-    <div id="resume">
+    <div id="resume" className={isMinimized ? "mini" : ""}>
       {theme === "professional" && (
         <ResumeProfessionalTheme
           contactInfo={contactInfo}

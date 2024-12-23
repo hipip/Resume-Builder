@@ -23,10 +23,10 @@ const HomePage = () => {
       <section className="hero section">
         <div className="hero-text-area">
           <h1 className="section-title">
-            The Only Resume Generator You will ever need
+            The Only <em>FREE</em> Resume Builder You will ever need
           </h1>
-          <Link to="/generator" id="main-call-to-action">
-            Start Generating
+          <Link to="/builder" id="main-call-to-action">
+            Start Building
           </Link>
         </div>
       </section>
