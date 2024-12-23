@@ -1,8 +1,11 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This Resume Builder App is a dynamic tool for creating professional resumes while showcasing my React.js learning journey.
 
-Currently, two official plugins are available:
+Key Features and Learnings:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- State Management: Used useState and useEffect for dynamic data handling.
+  Component Communication: Passed state between components for seamless data flow.
+- React Router: Integrated routing with nested routes, the Outlet component, and NavLink.
+- Dynamic & Responsive Design: Real-time previews, elegant themes, and mobile-friendly layouts.
+- This project highlights my understanding of React fundamentals, routing, and responsive design principles.
