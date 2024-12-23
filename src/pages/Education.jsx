@@ -14,9 +14,11 @@ const Education = ({ education, addEducation, deleteEducation }) => {
     startDate: "",
     endDate: "",
   });
+  const [toEditId, setToEditId] = useState(null);
 
   const setAddMode = () => setMode("add");
   const setNormalMode = () => setMode("normal");
+  const setEditMode = (e) => setMode("edit");
 
   return (
     <div>
@@ -118,8 +120,7 @@ const Education = ({ education, addEducation, deleteEducation }) => {
                   className="special-btn"
                   id="add-new-edu-btn"
                   onClick={() => {
-                    console.log("now");
-
+                    addEducation(newEducation);
                     setNormalMode();
                     setNewEducation({
                       degree: "",

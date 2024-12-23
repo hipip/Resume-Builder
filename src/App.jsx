@@ -131,6 +131,7 @@ function App() {
       newEdu.degree !== "" &&
       newEdu.nameOfSchool !== "" &&
       newEdu.fieldOfStudy !== "" &&
+      newEdu.location !== "" &&
       newEdu.startDate !== "" &&
       newEdu.endDate !== ""
     ) {

@@ -516,7 +516,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  width: 50%;
+  width: 65%;
 }
 
 .education-item {
@@ -574,4 +574,42 @@ button {
 }
 #cancel-new-edu-btn {
   background-color: crimson;
+}
+
+.section-three {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 60px;
+  gap: 100px;
+  background-color: var(--main-color);
+}
+
+.footer .logo {
+  font-size: 4rem;
+  font-weight: 900;
+  color: white;
+  font-family: "Playfair Display", serif;
+}
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.footer-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  color: white;
+  gap: 10px;
 }
