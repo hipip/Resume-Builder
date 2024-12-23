@@ -2,7 +2,7 @@
 
 :root {
   --main-color: #1e40af;
-  --hero-color: rgba(30, 64, 175, 0.9);
+  --hero-color: rgba(30, 64, 175, 0.93);
 }
 
 * {
@@ -21,11 +21,13 @@ a {
 }
 
 .header {
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 80px;
-  box-shadow: 0 0 10px 0 black;
+  padding: 25px 80px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
   background-color: white;
 }
 
@@ -82,21 +84,9 @@ a {
   color: white;
   height: 80vh;
   background: linear-gradient(var(--hero-color), var(--hero-color)),
-    url("https://i.imgur.com/5vECntx.png");
-  background-position: center, top;
-  animation: float-animation 5s ease-in-out infinite;
-}
-
-@keyframes float-animation {
-  0% {
-    background-position: center, 0 10px;
-  }
-  50% {
-    background-position: center, 0 20px;
-  }
-  100% {
-    background-position: center, 0 10px;
-  }
+    url("https://images.unsplash.com/photo-1698047681432-006d2449c631?auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-text-area {
@@ -144,4 +134,102 @@ a {
 
 #special-span {
   color: var(--main-color);
+}
+
+#resume {
+  width: 21cm;
+  min-height: 29.7cm;
+  margin: 150px auto;
+  padding: 40px 50px;
+  box-shadow: 0 0 30px -2px rgba(0, 0, 0, 0.2);
+}
+
+.resume-full-name {
+  font-weight: 900;
+}
+
+.resume-wrapper,
+.contact-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.resume-wrapper[theme="professional"] .resume-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+
+.resume-wrapper[theme="professional"] .resume-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
+.resume-links-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.experience-title {
+  font-weight: 600;
+}
+
+.experiences-conatainer,
+.educations-container {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.resume-experience-item {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.experience-date-and-location {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #5a5a5a;
+}
+.experience-responsabilities,
+.skills-container {
+  margin: 0 25px;
+  font-size: 0.85rem;
+}
+
+.education-school {
+  font-weight: 500;
+}
+
+.education-date {
+  color: #5a5a5a;
+}
+
+.resume-education-item,
+.resume-experience-item {
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.line-break {
+  margin-bottom: 10px;
 }
