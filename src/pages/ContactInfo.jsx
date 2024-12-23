@@ -5,7 +5,7 @@ const ContactInfo = ({ data, setData }) => {
     data;
   return (
     <div className="builder-section">
-      <h1 className="builder-section-title">Contact Info</h1>
+      <h1 className="builder-section-title">Contact Info Section</h1>
       <div className="some-container">
         <FormItem
           htmlFor="fullName"

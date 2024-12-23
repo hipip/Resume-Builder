@@ -16,6 +16,12 @@ a {
   text-decoration: none;
 }
 
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
 #root {
   font-family: "Montserrat", serif;
 }
@@ -142,7 +148,6 @@ a {
 
 #resume {
   width: 21cm;
-  height: 29.7cm;
   min-height: 29.7cm;
   margin: 0 auto;
   box-shadow: 0 0 30px -2px rgba(0, 0, 0, 0.4);
@@ -504,4 +509,69 @@ a {
 
 .theme-selection-form {
   margin: 20px 0;
+}
+
+.education-container {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 50%;
+}
+
+.education-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding: 20px 40px;
+  border-radius: 30px;
+  background-color: rgb(231, 231, 231);
+}
+.education-item-btns-container {
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.edit-education-btn,
+.delete-education-btn {
+  font-size: 1.3rem;
+}
+
+.add-new-education-item-btn {
+  padding: 20px 40px;
+  border-radius: 30px;
+  background-color: black;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.new-education-item-form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.special-btn {
+  padding: 10px 40px;
+  border-radius: 30px;
+  color: white;
+  font-weight: 500;
+}
+.some-btns-container {
+  display: flex;
+  gap: 40px;
+}
+
+#add-new-edu-btn {
+  background-color: var(--main-color);
+}
+#cancel-new-edu-btn {
+  background-color: crimson;
 }

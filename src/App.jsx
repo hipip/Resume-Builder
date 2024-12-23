@@ -122,6 +122,22 @@ function App() {
 
   const [theme, setTheme] = useState("professional");
 
+  const deleteEducation = (educId) => {
+    setEducation([...education.filter((edu) => edu.id !== educId)]);
+  };
+
+  const addEducation = (newEdu) => {
+    if (
+      newEdu.degree !== "" &&
+      newEdu.nameOfSchool !== "" &&
+      newEdu.fieldOfStudy !== "" &&
+      newEdu.startDate !== "" &&
+      newEdu.endDate !== ""
+    ) {
+      setEducation([...education, { ...newEdu, id: uuidv4() }]);
+    }
+  };
+
   const router = createBrowserRouter([
     {
       path: "/",
@@ -141,7 +157,13 @@ function App() {
         },
         {
           path: "education",
-          element: <Education />,
+          element: (
+            <Education
+              education={education}
+              addEducation={addEducation}
+              deleteEducation={deleteEducation}
+            />
+          ),
         },
         {
           path: "experience",
