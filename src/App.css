@@ -159,6 +159,7 @@ button {
 
 .resume-wrapper {
   padding: 50px;
+  height: 100%;
 }
 
 .resume-wrapper,
@@ -179,7 +180,8 @@ button {
   padding: 0;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  height: 100%;
+  gap: 30px;
+  min-height: 29.7cm;
 }
 
 .resume-wrapper[theme="elegant"] .contact-info-section {
@@ -197,7 +199,6 @@ button {
 }
 
 .resume-wrapper[theme="elegant"] .col-one {
-  height: 100%;
   background-color: #f5f5f5;
 }
 
