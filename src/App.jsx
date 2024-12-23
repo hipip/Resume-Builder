@@ -14,6 +14,7 @@ import Skills from "./pages/Skills";
 import Download from "./pages/Download";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import AboutPage from "./pages/AboutPage";
 
 function App() {
   const [contactInfo, setContactInfo] = useState({
@@ -143,6 +144,10 @@ function App() {
     {
       path: "/",
       element: <HomePage />,
+    },
+    {
+      path: "/about",
+      element: <AboutPage />,
     },
     {
       path: "/builder",

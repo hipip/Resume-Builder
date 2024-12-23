@@ -6,12 +6,8 @@ import professional from "../assets/professional.png";
 import standout from "../assets/standout.png";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faLocationDot,
-  faPhone,
-  faXmark,
-} from "@fortawesome/free-solid-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import Footer from "../components/Footer";
 
 const HomePage = () => {
   const [isImgOpen, setIsImgOpen] = useState(false);
@@ -63,24 +59,7 @@ const HomePage = () => {
         <h2>If you liked this project please hire me !</h2>
       </section>
 
-      <footer className="footer">
-        <div className="logo">RESUME BUILDER</div>
-        <div className="footer-links">
-          <a className="footer-link" href="https://github.com/hipip">
-            <FontAwesomeIcon icon={faGithub} />
-            hipip
-          </a>
-          <div className="footer-link">
-            <FontAwesomeIcon icon={faPhone} />
-            +213558642150
-          </div>
-
-          <div className="footer-link">
-            <FontAwesomeIcon icon={faLocationDot} />
-            18000, Jijel, Jijel, Jijel, Algeria
-          </div>
-        </div>
-      </footer>
+      <Footer />
 
       {isImgOpen && (
         <div className="fullscreen-img-wrapper">
