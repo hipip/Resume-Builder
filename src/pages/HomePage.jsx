@@ -1,7 +1,22 @@
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
+import HomePageImgCard from "../components/HomePageImgCard";
+import elegant from "../assets/elegant.png";
+import professional from "../assets/professional.png";
+import standout from "../assets/standout.png";
+import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const HomePage = () => {
+  const [isImgOpen, setIsImgOpen] = useState(false);
+  const [fullscreenImg, setFullScreenImg] = useState(null);
+
+  const openFullScreen = (img) => {
+    setIsImgOpen(true);
+    setFullScreenImg(img);
+  };
+
   return (
     <div className="home-page">
       <Header />
@@ -20,7 +35,39 @@ const HomePage = () => {
           Choose from a Curated Collection of
           <span id="special-span"> Premium </span> Templates
         </div>
+        <div className="section-two-images">
+          <HomePageImgCard
+            text="Elegant Theme"
+            img={elegant}
+            onClick={openFullScreen}
+          />
+          <HomePageImgCard
+            text="Professional Theme"
+            img={professional}
+            onClick={openFullScreen}
+          />
+          <HomePageImgCard
+            text="Standout Theme"
+            img={standout}
+            onClick={openFullScreen}
+          />
+        </div>
       </section>
+
+      {isImgOpen && (
+        <div className="fullscreen-img-wrapper">
+          <img src={fullscreenImg} />
+          <button
+            id="close-fullscreen-img-btn"
+            onClick={() => {
+              setIsImgOpen(false);
+              setFullScreenImg(null);
+            }}
+          >
+            <FontAwesomeIcon icon={faXmark} />
+          </button>
+        </div>
+      )}
     </div>
   );
 };

@@ -86,7 +86,6 @@ const ResumeElegantTheme = ({ contactInfo, education, experience, skills }) => {
       </div>
       <section className="experience-section">
         <h3 className="resume-section-title">WORK EXPERIENCE</h3>
-        <hr className="line-break" />
         <div className="experiences-conatainer">
           {experience.map((exp) => (
             <div className="resume-experience-item" key={exp.id}>
@@ -101,7 +100,9 @@ const ResumeElegantTheme = ({ contactInfo, education, experience, skills }) => {
               </div>
               <ul className="experience-responsabilities">
                 {exp.responsibilities.map((res) => (
-                  <li className="experience-responsibility">{res}</li>
+                  <li className="experience-responsibility" key={res}>
+                    {res}
+                  </li>
                 ))}
               </ul>
             </div>

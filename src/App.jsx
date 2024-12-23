@@ -115,18 +115,6 @@ function App() {
       path: "/",
       element: <HomePage />,
     },
-    {
-      path: "/preview",
-      element: (
-        <Resume
-          contactInfo={contactInfo}
-          education={education}
-          experience={experience}
-          skills={skills}
-          theme="elegant"
-        />
-      ),
-    },
   ]);
 
   return (

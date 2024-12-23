@@ -9,9 +9,6 @@ const Header = () => {
         </Link>
       </div>
       <div className="header-col-two">
-        <Link to="/templates" className="header-link">
-          Templates
-        </Link>
         <Link to="/about" className="header-link">
           About
         </Link>
