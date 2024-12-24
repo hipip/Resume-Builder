@@ -142,6 +142,10 @@ function App() {
     return false;
   };
 
+  const deleteExperience = (expId) => {
+    setExperience([...experience.filter((exp) => exp.id !== expId)]);
+  };
+
   const router = createBrowserRouter([
     {
       path: "/",
@@ -176,7 +180,12 @@ function App() {
         },
         {
           path: "experience",
-          element: <Experience />,
+          element: (
+            <Experience
+              experience={experience}
+              deleteExperience={deleteExperience}
+            />
+          ),
         },
         {
           path: "skills",

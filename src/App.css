@@ -35,6 +35,7 @@ button {
   padding: 25px 80px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
   background-color: white;
+  z-index: 99;
 }
 
 .header-link {
@@ -508,15 +509,17 @@ button {
   margin: 20px 0;
 }
 
-.education-container {
+.education-container,
+.experience-container {
   margin: 20px 0;
   display: flex;
   flex-direction: column;
   gap: 30px;
-  width: 65%;
+  width: 60%;
 }
 
-.education-item {
+.education-item,
+.experience-item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -526,7 +529,8 @@ button {
   border-radius: 30px;
   background-color: rgb(231, 231, 231);
 }
-.education-item-btns-container {
+.education-item-btns-container,
+.experience-item-btns-container {
   margin-left: auto;
   display: flex;
   justify-content: center;
@@ -534,7 +538,9 @@ button {
   gap: 10px;
 }
 .edit-education-btn,
-.delete-education-btn {
+.edit-experience-btn,
+.delete-education-btn,
+.delete-experience-btn {
   font-size: 1.3rem;
 }
 
@@ -648,7 +654,7 @@ button {
 }
 
 .builder-section {
-  transform: translateX(-300px);
+  transform: translateX(200px);
   opacity: 0;
   animation: builder-section-anim 0.45s ease-in-out forwards;
 }
