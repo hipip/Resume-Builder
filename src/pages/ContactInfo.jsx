@@ -22,8 +22,14 @@ const ContactInfo = ({ data, setData }) => {
           value={email}
           onChange={(e) => setData({ ...data, email: e.target.value })}
         />
-      </div>
-      <div className="some-container">
+        <FormItem
+          htmlFor="location"
+          type="text"
+          labelTxtContent="Location"
+          placeHolder="please enter your location"
+          value={location}
+          onChange={(e) => setData({ ...data, location: e.target.value })}
+        />
         <FormItem
           htmlFor="jobTitle"
           type="text"
@@ -32,6 +38,8 @@ const ContactInfo = ({ data, setData }) => {
           value={jobTitle}
           onChange={(e) => setData({ ...data, jobTitle: e.target.value })}
         />
+      </div>
+      <div className="some-container">
         <FormItem
           htmlFor="phoneNumber"
           type="tel"
@@ -39,18 +47,7 @@ const ContactInfo = ({ data, setData }) => {
           placeHolder="please enter your phone number"
           value={phoneNumber}
           onChange={(e) => setData({ ...data, phoneNumber: e.target.value })}
-        />
-      </div>
-      <FormItem
-        htmlFor="location"
-        type="text"
-        labelTxtContent="Location"
-        placeHolder="please enter your location"
-        value={location}
-        onChange={(e) => setData({ ...data, location: e.target.value })}
-      />
-
-      <div className="some-container">
+        />{" "}
         <FormItem
           htmlFor="linkedIn"
           type="text"

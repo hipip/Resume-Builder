@@ -10,7 +10,7 @@ const Download = ({
 }) => {
   return (
     <div className="builder-section">
-      <h1 className="builder-section-title">Download</h1>
+      <h1 className="builder-section-title">Download Page</h1>
       <div
         onChange={(e) => {
           setTheme(e.target.value);

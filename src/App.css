@@ -458,10 +458,6 @@ button {
   background-color: var(--main-color);
 }
 
-.builder-section {
-  padding: 40px;
-}
-
 .form-item {
   display: flex;
   flex-direction: column;
@@ -554,16 +550,16 @@ button {
 .new-education-item-form {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
   gap: 20px;
 }
 
 .special-btn {
+  font-weight: 700;
   padding: 10px 40px;
   border-radius: 30px;
   color: white;
-  font-weight: 500;
 }
 .some-btns-container {
   display: flex;
@@ -628,4 +624,15 @@ button {
 
 .about-section .description {
   padding: 0 150px;
+}
+
+.builder-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+  padding: 40px;
+}
+#save-and-return-edu {
+  background-color: green;
 }

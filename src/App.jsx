@@ -137,7 +137,9 @@ function App() {
       newEdu.endDate !== ""
     ) {
       setEducation([...education, { ...newEdu, id: uuidv4() }]);
+      return true;
     }
+    return false;
   };
 
   const router = createBrowserRouter([
@@ -168,6 +170,7 @@ function App() {
               education={education}
               addEducation={addEducation}
               deleteEducation={deleteEducation}
+              setEducation={setEducation}
             />
           ),
         },

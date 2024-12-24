@@ -1,7 +1,7 @@
 import { faPenToSquare, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const EducationItem = ({ edu, deleteEducation }) => {
+const EducationItem = ({ edu, deleteEducation, setEditMode }) => {
   const { degree, nameOfSchool, startDate, endDate } = edu;
   return (
     <div className="education-item">
@@ -14,7 +14,11 @@ const EducationItem = ({ edu, deleteEducation }) => {
         </p>
       </div>
       <div className="education-item-btns-container">
-        <button type="button" className="edit-education-btn">
+        <button
+          type="button"
+          className="edit-education-btn"
+          onClick={setEditMode}
+        >
           <FontAwesomeIcon icon={faPenToSquare} />
         </button>
         <button
