@@ -510,7 +510,8 @@ button {
 }
 
 .education-container,
-.experience-container {
+.experience-container,
+.skills-setup-container {
   margin: 20px 0;
   display: flex;
   flex-direction: column;
@@ -520,13 +521,24 @@ button {
   width: 60%;
 }
 
-#add-responsibility-btn {
+.skills-setup-container {
+  padding: 20px 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+#add-responsibility-btn,
+#add-skill-btn,
+#confirm-add-skill-btn {
   margin: 10px 0;
   background-color: black;
 }
 
 .education-item,
-.experience-item {
+.experience-item,
+.skill-item-setup {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -537,7 +549,8 @@ button {
   background-color: rgb(231, 231, 231);
 }
 .education-item-btns-container,
-.experience-item-btns-container {
+.experience-item-btns-container,
+.skill-item-btns-container {
   margin-left: auto;
   display: flex;
   justify-content: center;
@@ -571,6 +584,7 @@ button {
 
 .special-btn {
   font-weight: 700;
+  font-size: 1.2rem;
   padding: 10px 40px;
   border-radius: 30px;
   color: white;
@@ -587,7 +601,8 @@ button {
   background-color: var(--main-color);
 }
 #cancel-new-edu-btn,
-#cancel-add-experience-btn {
+#cancel-add-experience-btn,
+#cancel-add-skill-btn {
   flex-grow: 1;
   background-color: crimson;
 }
@@ -667,9 +682,9 @@ button {
 }
 
 .builder-section {
-  transform: translateX(200px);
+  transform: translateX(-200px);
   opacity: 0;
-  animation: builder-section-anim 0.45s ease-in-out forwards;
+  animation: builder-section-anim 0.5s ease-in-out forwards;
 }
 
 @keyframes builder-section-anim {

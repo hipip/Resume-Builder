@@ -11,9 +11,6 @@ const ExperienceItem = ({ exp, deleteExperience }) => {
         </p>
       </div>
       <div className="experience-item-btns-container">
-        <button type="button" className="edit-experience-btn">
-          <FontAwesomeIcon icon={faPenToSquare} />
-        </button>
         <button
           type="button"
           className="delete-experience-btn"

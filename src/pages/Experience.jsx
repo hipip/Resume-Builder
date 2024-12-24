@@ -177,7 +177,21 @@ const Experience = ({ experience, addExperience, deleteExperience }) => {
                 >
                   Add Experience
                 </button>
-                <button className="special-btn" id="cancel-add-experience-btn">
+                <button
+                  className="special-btn"
+                  id="cancel-add-experience-btn"
+                  onClick={() => {
+                    setMode("normal");
+                    setNewExperience({
+                      jobTitle: "",
+                      company: "",
+                      location: "",
+                      startDate: "",
+                      endDate: "",
+                      responsibilities: [],
+                    });
+                  }}
+                >
                   Cancel
                 </button>
               </div>

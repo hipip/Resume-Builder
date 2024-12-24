@@ -150,6 +150,14 @@ function App() {
     setExperience([...experience, { ...newExp, id: uuidv4() }]);
   };
 
+  const addSkill = (newSkillName) => {
+    setSkills([...skills, { name: newSkillName, id: uuidv4() }]);
+  };
+
+  const deleteSkill = (skillId) => {
+    setSkills([...skills.filter((s) => s.id !== skillId)]);
+  };
+
   const router = createBrowserRouter([
     {
       path: "/",
@@ -194,7 +202,13 @@ function App() {
         },
         {
           path: "skills",
-          element: <Skills />,
+          element: (
+            <Skills
+              skills={skills}
+              addSkill={addSkill}
+              deleteSkill={deleteSkill}
+            />
+          ),
         },
         {
           path: "download",
