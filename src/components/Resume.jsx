@@ -10,6 +10,8 @@ const Resume = ({
   theme,
   isMinimized,
 }) => {
+  education = education.sort((a, b) => a.startDate - b.startDate);
+
   return (
     <div id="resume" className={isMinimized ? "mini" : ""}>
       {theme === "professional" && (

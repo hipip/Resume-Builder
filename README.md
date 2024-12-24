@@ -1,4 +1,4 @@
-# React + Vite
+# Resume Builder
 
 This Resume Builder App is a dynamic tool for creating professional resumes while showcasing my React.js learning journey.
 
