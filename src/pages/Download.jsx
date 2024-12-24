@@ -1,4 +1,7 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Resume from "../components/Resume";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import html2pdf from "html2pdf.js";
 
 const Download = ({
   contactInfo,
@@ -8,6 +11,28 @@ const Download = ({
   theme,
   setTheme,
 }) => {
+  const downloadPDF = () => {
+    const element = document.querySelector("#resume");
+    const { width, height } = element.getBoundingClientRect();
+
+    const options = {
+      margin: 0,
+      filename: "Resume.pdf",
+      image: { type: "jpeg", quality: 1 },
+      html2canvas: {
+        scale: 3,
+        useCORS: true,
+      },
+      jsPDF: {
+        unit: "px",
+        format: [width, height],
+        orientation: "portrait",
+      },
+    };
+
+    html2pdf().from(element).set(options).save();
+  };
+
   return (
     <div className="builder-section">
       <h1 className="builder-section-title">Download Page</h1>
@@ -45,6 +70,12 @@ const Download = ({
             value="standout"
           />
         </div>
+      </div>
+      <div>
+        <button className="download-resume-btn" onClick={downloadPDF}>
+          Download Resume
+          <FontAwesomeIcon icon={faDownload} />
+        </button>
       </div>
       <Resume
         contactInfo={contactInfo}

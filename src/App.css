@@ -151,6 +151,7 @@ button {
   width: 21cm;
   min-height: 29.7cm;
   margin: 0 auto;
+  font-family: "Montserrat", serif;
   box-shadow: 0 0 30px -2px rgba(0, 0, 0, 0.4);
 }
 
@@ -160,7 +161,6 @@ button {
 
 .resume-wrapper {
   padding: 50px;
-  height: 100%;
 }
 
 .resume-wrapper,
@@ -710,4 +710,22 @@ button {
   display: flex;
   gap: 20px;
   font-size: 1.3rem;
+}
+
+.download-resume-btn {
+  display: flex;
+  padding: 10px 40px;
+  border-radius: 30px;
+  margin: 30px;
+  gap: 15px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  background-color: black;
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+
+.download-resume-btn:hover,
+.download-resume-btn:focus {
+  box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.8);
 }
