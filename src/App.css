@@ -32,7 +32,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 80px;
+  padding: 25px 58px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
   background-color: white;
   z-index: 99;
@@ -514,8 +514,15 @@ button {
   margin: 20px 0;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
   gap: 30px;
   width: 60%;
+}
+
+#add-responsibility-btn {
+  margin: 10px 0;
+  background-color: black;
 }
 
 .education-item,
@@ -544,7 +551,8 @@ button {
   font-size: 1.3rem;
 }
 
-.add-new-education-item-btn {
+.add-new-education-item-btn,
+.add-new-experience-item-btn {
   padding: 15px 40px;
   border-radius: 30px;
   background-color: black;
@@ -569,13 +577,18 @@ button {
 }
 .some-btns-container {
   display: flex;
+  justify-content: stretch;
   gap: 40px;
 }
 
-#add-new-edu-btn {
+#add-new-edu-btn,
+#confirm-add-experience-btn {
+  flex-grow: 1;
   background-color: var(--main-color);
 }
-#cancel-new-edu-btn {
+#cancel-new-edu-btn,
+#cancel-add-experience-btn {
+  flex-grow: 1;
   background-color: crimson;
 }
 
@@ -667,4 +680,19 @@ button {
     transform: translateX(0);
     opacity: 1;
   }
+}
+
+.flex-test {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.responsibility-item {
+  list-style: circle;
+  display: flex;
+  gap: 20px;
+  font-size: 1.3rem;
 }
