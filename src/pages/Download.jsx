@@ -19,10 +19,12 @@ const Download = ({
 
     const options = {
       margin: 0,
-      filename: "Resume.pdf",
+      filename: `${
+        contactInfo.fullName.trim().toLowerCase().split(" ").join("-") || ""
+      }-Resume.pdf`,
       image: { type: "jpeg", quality: 1 },
       html2canvas: {
-        scale: 3,
+        scale: 4,
         useCORS: true,
       },
       jsPDF: {
