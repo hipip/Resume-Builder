@@ -80,7 +80,7 @@ const ResumeProfessionalTheme = ({
           {education.map((edu) => (
             <div className="resume-education-item" key={edu.id}>
               <p>
-                <strong>{edu.nameOfSchool}</strong> - {edu.degree} in
+                <strong>{edu.nameOfSchool}</strong> - {edu.degree} in{" "}
                 {edu.fieldOfStudy}
               </p>
               <div className="education-date">
