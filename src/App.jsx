@@ -197,6 +197,7 @@ function App() {
               experience={experience}
               addExperience={addExperience}
               deleteExperience={deleteExperience}
+              setExperience={setExperience}
             />
           ),
         },
