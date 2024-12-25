@@ -388,7 +388,8 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 570px;
+  width: 580px;
+  z-index: 999;
   box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.4);
 }
 
