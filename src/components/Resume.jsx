@@ -8,17 +8,13 @@ const Resume = ({
   education,
   experience,
   theme,
-  isMinimized,
   font,
 }) => {
   education = education.sort((a, b) => a.startDate - b.startDate);
+  experience = experience.sort((a, b) => a.startDate - b.startDate);
 
   return (
-    <div
-      id="resume"
-      className={isMinimized ? "mini" : ""}
-      style={{ fontFamily: `"${font}", serif` }}
-    >
+    <div id="resume" style={{ fontFamily: `"${font}", serif` }}>
       {theme === "professional" && (
         <ResumeProfessionalTheme
           contactInfo={contactInfo}
