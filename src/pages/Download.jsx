@@ -15,7 +15,8 @@ const Download = ({
   const [mainFont, setMainFont] = useState("Montserrat");
   const downloadPDF = () => {
     const element = document.querySelector("#resume");
-    const { width, height } = element.getBoundingClientRect();
+    const width = element.offsetWidth;
+    const height = element.offsetHeight;
 
     const options = {
       margin: 0,
